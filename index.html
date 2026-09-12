@@ -4,35 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>CJWorld8 Guide | คู่มือและข้อมูลการใช้งาน</title>
+  <!-- =========================
+       SEO
+  ========================== -->
+  <title>CJNINE | คู่มือ ข้อมูล และการเริ่มต้นใช้งาน</title>
 
   <meta
     name="description"
-    content="CJWorld8 Guide รวมข้อมูลเบื้องต้น ขั้นตอนการใช้งาน คำถามที่พบบ่อย และข้อมูลสำหรับผู้ที่ต้องการศึกษาระบบก่อนเข้าใช้งาน"
+    content="CJNINE รวมคู่มือ ข้อมูลเบื้องต้น ขั้นตอนการเริ่มต้นใช้งาน และคำถามที่พบบ่อย สำหรับผู้ที่ต้องการศึกษาข้อมูลก่อนเข้าใช้งาน"
   >
 
   <meta
     name="keywords"
-    content="CJWorld8, CJWorld8 Guide, คู่มือ CJWorld8, วิธีใช้งาน CJWorld8"
+    content="CJNINE, CJNINE Guide, คู่มือ CJNINE, วิธีใช้งาน CJNINE, CJNINE ข้อมูล"
   >
 
   <meta name="robots" content="index, follow">
-  <meta name="author" content="CJWorld8 Guide">
+  <meta name="author" content="CJNINE">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="CJWorld8 Guide | คู่มือและข้อมูลการใช้งาน">
+  <!-- =========================
+       Open Graph
+  ========================== -->
+  <meta property="og:title" content="CJNINE | คู่มือและข้อมูลการใช้งาน">
+
   <meta
     property="og:description"
-    content="รวมข้อมูลและคู่มือเบื้องต้นสำหรับผู้ที่ต้องการศึกษาการใช้งาน CJWorld8"
+    content="รวมคู่มือและข้อมูลเบื้องต้นสำหรับผู้ที่ต้องการศึกษาข้อมูลและเริ่มต้นใช้งาน"
   >
-  <meta property="og:type" content="website">
 
-  <!-- Google Analytics -->
-  <!--
-  ขั้นต่อไปเราจะเอา Google Analytics Measurement ID
-  เช่น G-XXXXXXXXXX มาใส่ตรงนี้
-  -->
+  <meta property="og:type" content="website">
+  <meta
+    property="og:url"
+    content="https://cjinne9.github.io/cjworld8-guide/"
+  >
+
+  <!-- =========================
+       Google Analytics
+       เดี๋ยวเราจะติด GA4 ตรงนี้ภายหลัง
+  ========================== -->
 
   <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -49,7 +58,9 @@
   </script>
   -->
 
+
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -61,8 +72,13 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #07111f;
+      font-family:
+        Arial,
+        "Noto Sans Thai",
+        Helvetica,
+        sans-serif;
+
+      background: #06111f;
       color: #ffffff;
       line-height: 1.7;
     }
@@ -71,637 +87,1196 @@
       text-decoration: none;
     }
 
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
     header {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: rgba(7, 17, 31, 0.95);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
+      z-index: 999;
+
+      background: rgba(6,17,31,0.94);
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter: blur(12px);
     }
 
     .nav {
-      width: min(1100px, 92%);
-      margin: auto;
+      width: min(1150px,92%);
       min-height: 72px;
+
+      margin: auto;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+
+      gap: 25px;
     }
 
     .logo {
-      font-size: 22px;
-      font-weight: 800;
-      color: #ffffff;
+      color: white;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 1px;
     }
 
     .logo span {
-      color: #41d1ff;
+      color: #48d9ff;
     }
 
     .nav-links {
       display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 25px;
     }
 
     .nav-links a {
-      color: #c8d4e3;
+      color: #b6c4d5;
       font-size: 14px;
+      font-weight: 600;
     }
 
     .nav-links a:hover {
-      color: #41d1ff;
+      color: #4bdcff;
     }
 
+
+    /* =========================
+       HERO
+    ========================== */
+
     .hero {
-      min-height: 640px;
+      min-height: 650px;
+
       display: flex;
       align-items: center;
+
       background:
-        radial-gradient(circle at 75% 30%, rgba(58, 111, 255, 0.28), transparent 32%),
-        radial-gradient(circle at 20% 70%, rgba(0, 219, 222, 0.16), transparent 30%),
-        #07111f;
+        radial-gradient(
+          circle at 75% 30%,
+          rgba(77,91,255,.27),
+          transparent 35%
+        ),
+
+        radial-gradient(
+          circle at 15% 70%,
+          rgba(0,224,214,.15),
+          transparent 32%
+        ),
+
+        #071321;
     }
 
     .hero-inner {
-      width: min(1100px, 92%);
+      width: min(1100px,92%);
+
       margin: auto;
-      padding: 80px 0;
+
+      padding: 90px 0;
+
       text-align: center;
     }
 
     .badge {
       display: inline-block;
-      padding: 8px 16px;
-      border: 1px solid rgba(65,209,255,0.35);
+
+      margin-bottom: 25px;
+
+      padding: 8px 18px;
+
+      border:
+        1px solid rgba(72,217,255,.4);
+
       border-radius: 50px;
-      color: #66dcff;
-      background: rgba(65,209,255,0.08);
+
+      background:
+        rgba(72,217,255,.08);
+
+      color: #58dcff;
+
       font-size: 14px;
-      margin-bottom: 24px;
     }
 
     h1 {
-      font-size: clamp(40px, 7vw, 78px);
-      line-height: 1.12;
-      margin-bottom: 24px;
+      max-width: 950px;
+
+      margin:
+        0 auto 25px;
+
+      font-size:
+        clamp(44px,7vw,80px);
+
+      line-height: 1.1;
+
+      letter-spacing: -2px;
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, #41d1ff, #7069ff);
+      background:
+        linear-gradient(
+          90deg,
+          #46ddff,
+          #598aff,
+          #806cff
+        );
+
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      -webkit-text-fill-color:
+        transparent;
     }
 
-    .hero p {
+    .hero-description {
       max-width: 760px;
-      margin: 0 auto 34px;
-      color: #aebed0;
+
+      margin:
+        0 auto 35px;
+
+      color: #adbed1;
+
       font-size: 18px;
     }
 
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
     .buttons {
       display: flex;
-      gap: 14px;
       justify-content: center;
+
+      gap: 14px;
+
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
-      padding: 15px 27px;
+
+      padding:
+        15px 28px;
+
       border-radius: 12px;
-      font-weight: 700;
-      transition: 0.25s;
+
+      font-weight: 800;
+
+      transition:
+        transform .2s ease,
+        opacity .2s ease;
+    }
+
+    .btn:hover {
+      transform:
+        translateY(-3px);
     }
 
     .btn-primary {
-      color: #06111c;
-      background: linear-gradient(90deg, #41d1ff, #63f1c2);
-    }
+      color: #04131d;
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
+      background:
+        linear-gradient(
+          90deg,
+          #43d8ff,
+          #62efc2
+        );
     }
 
     .btn-secondary {
       color: #ffffff;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.04);
+
+      border:
+        1px solid rgba(255,255,255,.18);
+
+      background:
+        rgba(255,255,255,.04);
     }
 
+
+    /* =========================
+       COMMON
+    ========================== */
+
     section {
-      padding: 90px 0;
+      padding:
+        90px 0;
     }
 
     .container {
-      width: min(1100px, 92%);
-      margin: auto;
+      width:
+        min(1100px,92%);
+
+      margin:
+        auto;
     }
 
     .section-title {
-      text-align: center;
-      margin-bottom: 50px;
+      text-align:
+        center;
+
+      margin-bottom:
+        50px;
     }
 
     .section-title h2 {
-      font-size: clamp(30px, 4vw, 45px);
-      margin-bottom: 12px;
+      margin-bottom:
+        12px;
+
+      font-size:
+        clamp(30px,4vw,46px);
     }
 
     .section-title p {
-      color: #96a9bd;
-      max-width: 700px;
-      margin: auto;
+      max-width:
+        720px;
+
+      margin:
+        auto;
+
+      color:
+        #95a8bc;
     }
 
+
+    /* =========================
+       CARDS
+    ========================== */
+
     .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:
+        20px;
     }
 
     .card {
-      background: #0c1a2b;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 28px;
+      padding:
+        30px;
+
+      border:
+        1px solid rgba(255,255,255,.08);
+
+      border-radius:
+        18px;
+
+      background:
+        #0b1a2b;
+
+      transition:
+        transform .25s ease,
+        border .25s ease;
+    }
+
+    .card:hover {
+      transform:
+        translateY(-5px);
+
+      border-color:
+        rgba(72,217,255,.3);
     }
 
     .card-number {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      background: rgba(65,209,255,0.12);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #41d1ff;
-      font-weight: 800;
-      margin-bottom: 18px;
+      width:
+        50px;
+
+      height:
+        50px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      margin-bottom:
+        18px;
+
+      border-radius:
+        14px;
+
+      background:
+        rgba(72,217,255,.11);
+
+      color:
+        #48d9ff;
+
+      font-weight:
+        900;
     }
 
     .card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
+      margin-bottom:
+        10px;
+
+      font-size:
+        20px;
     }
 
     .card p {
-      color: #9eb0c3;
+      color:
+        #9dafc2;
     }
 
+
+    /* =========================
+       GUIDE
+    ========================== */
+
     .guide-box {
-      background: linear-gradient(135deg, #0d2036, #0b1726);
-      border: 1px solid rgba(65,209,255,0.12);
-      border-radius: 24px;
-      padding: 40px;
+      padding:
+        42px;
+
+      border:
+        1px solid rgba(72,217,255,.13);
+
+      border-radius:
+        24px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #0d2137,
+          #091624
+        );
     }
 
     .guide-box h2 {
-      margin-bottom: 20px;
-      font-size: 32px;
+      margin-bottom:
+        25px;
+
+      font-size:
+        34px;
     }
 
     .steps {
-      display: grid;
-      gap: 18px;
+      display:
+        grid;
+
+      gap:
+        16px;
     }
 
     .step {
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-      background: rgba(255,255,255,0.03);
-      padding: 20px;
-      border-radius: 14px;
+      display:
+        flex;
+
+      align-items:
+        flex-start;
+
+      gap:
+        18px;
+
+      padding:
+        20px;
+
+      border-radius:
+        14px;
+
+      background:
+        rgba(255,255,255,.035);
     }
 
-    .step strong {
-      color: #41d1ff;
-      min-width: 32px;
-      font-size: 18px;
+    .step-number {
+      min-width:
+        35px;
+
+      color:
+        #4bdcff;
+
+      font-size:
+        19px;
+
+      font-weight:
+        900;
     }
 
     .step p {
-      color: #a9bacb;
+      color:
+        #aabacc;
     }
 
+
+    /* =========================
+       INFO
+    ========================== */
+
+    .info {
+      padding:
+        35px;
+
+      border-radius:
+        20px;
+
+      border:
+        1px solid rgba(255,255,255,.08);
+
+      background:
+        #0b1929;
+    }
+
+    .info h2 {
+      margin-bottom:
+        18px;
+
+      font-size:
+        30px;
+    }
+
+    .info p {
+      margin-bottom:
+        15px;
+
+      color:
+        #a3b5c7;
+    }
+
+
+    /* =========================
+       FAQ
+    ========================== */
+
     .faq {
-      max-width: 850px;
-      margin: auto;
+      max-width:
+        850px;
+
+      margin:
+        auto;
     }
 
     details {
-      background: #0c1a2b;
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 20px;
-      border-radius: 14px;
-      margin-bottom: 14px;
+      margin-bottom:
+        14px;
+
+      padding:
+        20px;
+
+      border:
+        1px solid rgba(255,255,255,.08);
+
+      border-radius:
+        14px;
+
+      background:
+        #0b1a2b;
     }
 
     summary {
-      cursor: pointer;
-      font-weight: 700;
+      cursor:
+        pointer;
+
+      font-weight:
+        800;
     }
 
     details p {
-      color: #9fb0c1;
-      padding-top: 14px;
+      padding-top:
+        14px;
+
+      color:
+        #9eafc1;
     }
 
+
+    /* =========================
+       CTA
+    ========================== */
+
     .cta {
-      text-align: center;
-      padding: 70px 25px;
-      background: linear-gradient(
-        135deg,
-        rgba(45,114,255,0.18),
-        rgba(0,216,195,0.13)
-      );
-      border-radius: 25px;
+      padding:
+        70px 30px;
+
+      text-align:
+        center;
+
+      border-radius:
+        26px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(47,118,255,.18),
+          rgba(0,216,195,.13)
+        );
     }
 
     .cta h2 {
-      font-size: clamp(30px, 4vw, 44px);
-      margin-bottom: 15px;
+      margin-bottom:
+        15px;
+
+      font-size:
+        clamp(30px,4vw,46px);
     }
 
     .cta p {
-      color: #a9bacb;
-      margin-bottom: 26px;
+      max-width:
+        650px;
+
+      margin:
+        0 auto 28px;
+
+      color:
+        #a9bacb;
     }
 
     .disclosure {
-      margin-top: 25px;
-      font-size: 13px;
-      color: #7f91a5;
+      max-width:
+        750px;
+
+      margin:
+        28px auto 0;
+
+      color:
+        #75889d;
+
+      font-size:
+        13px;
     }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
-      padding: 40px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      text-align: center;
-      color: #6f8297;
-      font-size: 14px;
+      padding:
+        42px 0;
+
+      text-align:
+        center;
+
+      border-top:
+        1px solid rgba(255,255,255,.08);
+
+      color:
+        #708398;
+
+      font-size:
+        14px;
     }
 
-    @media (max-width: 800px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
+    footer strong {
+      color:
+        #9aabbd;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media(max-width:800px) {
 
       .nav-links {
-        display: none;
+        display:
+          none;
       }
 
       .hero {
-        min-height: 570px;
+        min-height:
+          590px;
+      }
+
+      h1 {
+        letter-spacing:
+          -1px;
+      }
+
+      .cards {
+        grid-template-columns:
+          1fr;
       }
 
       section {
-        padding: 70px 0;
+        padding:
+          70px 0;
       }
 
       .guide-box {
-        padding: 24px;
+        padding:
+          25px;
       }
+
+      .hero-description {
+        font-size:
+          16px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
 <header>
+
   <nav class="nav">
-    <div class="logo">
-      CJWORLD<span>8</span> GUIDE
-    </div>
+
+    <a
+      class="logo"
+      href="#top"
+      aria-label="CJNINE Home"
+    >
+      CJ<span>NINE</span>
+    </a>
+
 
     <div class="nav-links">
-      <a href="#about">ข้อมูล</a>
-      <a href="#guide">คู่มือ</a>
-      <a href="#faq">คำถามที่พบบ่อย</a>
+
+      <a href="#about">
+        ข้อมูล
+      </a>
+
+      <a href="#guide">
+        คู่มือ
+      </a>
+
+      <a href="#faq">
+        คำถามที่พบบ่อย
+      </a>
+
     </div>
+
   </nav>
+
 </header>
 
 
-<main>
 
-  <!-- HERO -->
-  <section class="hero">
+<main id="top">
 
-    <div class="hero-inner">
 
-      <div class="badge">
-        CJWorld8 Information Guide
-      </div>
+<!-- =========================
+     HERO
+========================== -->
 
-      <h1>
-        คู่มือและข้อมูล
-        <span class="gradient-text">
-          CJWorld8
-        </span>
-      </h1>
+<section class="hero">
 
-      <p>
-        หน้านี้จัดทำขึ้นเพื่อรวบรวมข้อมูลเบื้องต้น
-        แนวทางการใช้งาน และคำถามที่พบบ่อย
-        สำหรับผู้ที่ต้องการศึกษาข้อมูลก่อนเข้าใช้งาน
-      </p>
+  <div class="hero-inner">
 
-      <div class="buttons">
+    <div class="badge">
+      CJNINE INFORMATION GUIDE
+    </div>
 
-        <a
-          class="btn btn-primary"
-          href="https://www.cjworld8.com/register?ref=TrQMLzS8vHxWevPJa1ye5zf9xXDSmlI90QBV"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-        >
-          ดูเว็บไซต์
-        </a>
 
-        <a
-          class="btn btn-secondary"
-          href="#guide"
-        >
-          อ่านคู่มือ
-        </a>
+    <h1>
 
-      </div>
+      คู่มือและข้อมูล
+
+      <span class="gradient-text">
+        CJNINE
+      </span>
+
+    </h1>
+
+
+    <p class="hero-description">
+
+      CJNINE รวบรวมข้อมูลเบื้องต้น
+      แนวทางการเริ่มต้นใช้งาน
+      และคำถามที่พบบ่อย
+      เพื่อช่วยให้คุณศึกษารายละเอียด
+      ก่อนเข้าใช้งานเว็บไซต์ปลายทาง
+
+    </p>
+
+
+    <div class="buttons">
+
+
+      <!--
+      ปุ่มนี้ยังใช้ Referral Link เดิม
+      ห้ามเปลี่ยนถ้าต้องการใช้ Referral เดิม
+      -->
+
+      <a
+        class="btn btn-primary"
+        href="https://www.cjworld8.com/register?ref=TrQMLzS8vHxWevPJa1ye5zf9xXDSmlI90QBV"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+      >
+        ไปยังเว็บไซต์
+      </a>
+
+
+      <a
+        class="btn btn-secondary"
+        href="#guide"
+      >
+        อ่านคู่มือ
+      </a>
+
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- ABOUT -->
-  <section id="about">
 
-    <div class="container">
+<!-- =========================
+     ABOUT
+========================== -->
 
-      <div class="section-title">
+<section id="about">
 
-        <h2>
-          เริ่มต้นศึกษาข้อมูล
-        </h2>
+  <div class="container">
+
+
+    <div class="section-title">
+
+      <h2>
+        เริ่มต้นกับ CJNINE
+      </h2>
+
+      <p>
+        ข้อมูลเบื้องต้นที่ควรตรวจสอบ
+        ก่อนเริ่มต้นใช้งานเว็บไซต์หรือบริการออนไลน์
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <article class="card">
+
+        <div class="card-number">
+          01
+        </div>
+
+        <h3>
+          ศึกษาข้อมูล
+        </h3>
 
         <p>
-          ก่อนใช้งานเว็บไซต์หรือบริการออนไลน์
-          ควรอ่านรายละเอียด เงื่อนไข
-          และตรวจสอบข้อมูลให้ครบถ้วนก่อนเสมอ
+          อ่านข้อมูลเกี่ยวกับเว็บไซต์
+          ขั้นตอนการใช้งาน
+          และรายละเอียดที่เกี่ยวข้องให้ครบถ้วน
+          ก่อนเริ่มต้น
         </p>
 
-      </div>
+      </article>
 
 
-      <div class="cards">
+      <article class="card">
 
-        <article class="card">
+        <div class="card-number">
+          02
+        </div>
 
-          <div class="card-number">
+        <h3>
+          ตรวจสอบเว็บไซต์
+        </h3>
+
+        <p>
+          ตรวจสอบ URL ของเว็บไซต์
+          รวมถึงข้อมูลที่แสดงบนหน้าเว็บ
+          ก่อนกรอกข้อมูลหรือดำเนินการใด ๆ
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-number">
+          03
+        </div>
+
+        <h3>
+          อ่านข้อกำหนด
+        </h3>
+
+        <p>
+          ตรวจสอบเงื่อนไขการให้บริการ
+          นโยบายความเป็นส่วนตัว
+          และข้อกำหนดของผู้ให้บริการ
+          ก่อนเข้าใช้งาน
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     GUIDE
+========================== -->
+
+<section id="guide">
+
+  <div class="container">
+
+    <div class="guide-box">
+
+
+      <h2>
+        คู่มือเริ่มต้น
+      </h2>
+
+
+      <div class="steps">
+
+
+        <div class="step">
+
+          <div class="step-number">
             01
           </div>
 
-          <h3>
-            ศึกษารายละเอียด
-          </h3>
-
           <p>
-            ตรวจสอบข้อมูลของเว็บไซต์
-            เงื่อนไขการใช้งาน และข้อกำหนดต่าง ๆ
-            ก่อนเริ่มต้นใช้งาน
+            ศึกษาข้อมูลและรายละเอียด
+            ที่แสดงบน CJNINE
+            ก่อนเปิดเว็บไซต์ปลายทาง
           </p>
 
-        </article>
+        </div>
 
 
-        <article class="card">
+        <div class="step">
 
-          <div class="card-number">
+          <div class="step-number">
             02
           </div>
 
-          <h3>
-            ตรวจสอบข้อมูล
-          </h3>
-
           <p>
-            ตรวจสอบ URL และข้อมูลที่กรอกให้ถูกต้อง
-            และหลีกเลี่ยงการเปิดเผยข้อมูลสำคัญ
-            แก่บุคคลอื่น
+            เมื่อเปิดเว็บไซต์ปลายทาง
+            ให้ตรวจสอบชื่อโดเมนและ URL
+            ให้ถูกต้องก่อนดำเนินการ
           </p>
 
-        </article>
+        </div>
 
 
-        <article class="card">
+        <div class="step">
 
-          <div class="card-number">
+          <div class="step-number">
             03
           </div>
 
-          <h3>
-            อ่านเงื่อนไข
-          </h3>
-
           <p>
-            อ่านนโยบาย ความเป็นส่วนตัว
-            และข้อกำหนดของผู้ให้บริการ
-            ก่อนดำเนินการใด ๆ
+            อ่านข้อกำหนด
+            เงื่อนไขการใช้งาน
+            และนโยบายของผู้ให้บริการ
+            ให้ครบถ้วน
           </p>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- GUIDE -->
-  <section id="guide">
-
-    <div class="container">
-
-      <div class="guide-box">
-
-        <h2>
-          ขั้นตอนเบื้องต้น
-        </h2>
-
-        <div class="steps">
-
-          <div class="step">
-            <strong>1</strong>
-
-            <p>
-              เปิดเว็บไซต์ผ่านลิงก์อย่างเป็นทางการ
-              และตรวจสอบชื่อโดเมนก่อนดำเนินการ
-            </p>
-          </div>
-
-
-          <div class="step">
-            <strong>2</strong>
-
-            <p>
-              อ่านข้อมูลและข้อกำหนดที่เว็บไซต์แสดง
-              ให้ครบถ้วน
-            </p>
-          </div>
-
-
-          <div class="step">
-            <strong>3</strong>
-
-            <p>
-              หากต้องกรอกข้อมูล
-              ให้ตรวจสอบความถูกต้องก่อนยืนยัน
-            </p>
-          </div>
-
-
-          <div class="step">
-            <strong>4</strong>
-
-            <p>
-              เก็บข้อมูลบัญชีและรหัสผ่านไว้เป็นความลับ
-              และใช้รหัสผ่านที่คาดเดาได้ยาก
-            </p>
-          </div>
 
         </div>
 
-      </div>
 
-    </div>
+        <div class="step">
 
-  </section>
-
-
-  <!-- FAQ -->
-  <section id="faq">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>
-          คำถามที่พบบ่อย
-        </h2>
-
-        <p>
-          ข้อมูลเบื้องต้นเกี่ยวกับหน้า CJWorld8 Guide
-        </p>
-
-      </div>
-
-
-      <div class="faq">
-
-        <details>
-          <summary>
-            CJWorld8 Guide คืออะไร?
-          </summary>
+          <div class="step-number">
+            04
+          </div>
 
           <p>
-            เป็นหน้าเว็บไซต์ที่รวบรวมข้อมูล
-            และคำแนะนำเบื้องต้นสำหรับผู้ที่กำลัง
-            ศึกษาข้อมูลเกี่ยวกับ CJWorld8
+            หากมีการกรอกข้อมูล
+            ควรตรวจสอบความถูกต้อง
+            ก่อนกดยืนยันทุกครั้ง
           </p>
-        </details>
 
-
-        <details>
-          <summary>
-            ควรตรวจสอบอะไรบ้างก่อนใช้งาน?
-          </summary>
-
-          <p>
-            ควรตรวจสอบ URL เงื่อนไขการให้บริการ
-            นโยบายความเป็นส่วนตัว
-            และข้อกำหนดของเว็บไซต์ก่อนใช้งาน
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            หน้านี้เป็นเว็บไซต์หลักของ CJWorld8 หรือไม่?
-          </summary>
-
-          <p>
-            ไม่ใช่ หน้านี้เป็นเว็บไซต์คู่มือ
-            และข้อมูลอิสระเท่านั้น
-          </p>
-        </details>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CTA -->
-  <section>
-
-    <div class="container">
-
-      <div class="cta">
-
-        <h2>
-          ต้องการดูข้อมูลเพิ่มเติม?
-        </h2>
-
-        <p>
-          คุณสามารถเปิดเว็บไซต์ปลายทาง
-          เพื่อศึกษาข้อมูลและเงื่อนไขล่าสุดได้
-        </p>
-
-        <a
-          class="btn btn-primary"
-          href="https://www.cjworld8.com/register?ref=TrQMLzS8vHxWevPJa1ye5zf9xXDSmlI90QBV"
-          target="_blank"
-          rel="nofollow sponsored noopener"
-        >
-          ไปยังเว็บไซต์
-        </a>
-
-        <div class="disclosure">
-          Disclosure:
-          ลิงก์บางส่วนในหน้านี้อาจเป็นลิงก์แนะนำ
-          และผู้จัดทำเว็บไซต์อาจได้รับประโยชน์
-          หากมีการดำเนินการผ่านลิงก์ดังกล่าว
-          โปรดตรวจสอบข้อกำหนดและกฎหมายที่เกี่ยวข้องในพื้นที่ของคุณ
         </div>
 
+
+        <div class="step">
+
+          <div class="step-number">
+            05
+          </div>
+
+          <p>
+            รักษาข้อมูลบัญชี
+            รหัสผ่าน
+            และข้อมูลส่วนตัวของคุณ
+            ไว้เป็นความลับ
+          </p>
+
+        </div>
+
+
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     INFORMATION
+========================== -->
+
+<section>
+
+  <div class="container">
+
+    <div class="info">
+
+      <h2>
+        เกี่ยวกับ CJNINE
+      </h2>
+
+      <p>
+        CJNINE เป็นเว็บไซต์ข้อมูลและคู่มือ
+        ที่จัดทำขึ้นเพื่อช่วยรวบรวมข้อมูลเบื้องต้น
+        สำหรับผู้ที่ต้องการศึกษารายละเอียด
+        ก่อนเข้าใช้งานเว็บไซต์ปลายทาง
+      </p>
+
+      <p>
+        ข้อมูลบนเว็บไซต์อาจมีการปรับปรุง
+        เพื่อให้เหมาะสมกับข้อมูล
+        และขั้นตอนการใช้งานในปัจจุบัน
+      </p>
+
+      <p>
+        สำหรับข้อมูล เงื่อนไข
+        และข้อกำหนดล่าสุด
+        ควรตรวจสอบจากเว็บไซต์ของผู้ให้บริการ
+        โดยตรงอีกครั้ง
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FAQ
+========================== -->
+
+<section id="faq">
+
+  <div class="container">
+
+
+    <div class="section-title">
+
+      <h2>
+        คำถามที่พบบ่อย
+      </h2>
+
+      <p>
+        คำตอบเบื้องต้นเกี่ยวกับ
+        CJNINE และการใช้งานเว็บไซต์
+      </p>
+
+    </div>
+
+
+    <div class="faq">
+
+
+      <details>
+
+        <summary>
+          CJNINE คืออะไร?
+        </summary>
+
+        <p>
+          CJNINE เป็นเว็บไซต์ข้อมูล
+          และคู่มืออิสระ
+          สำหรับรวบรวมข้อมูลเบื้องต้น
+          และแนวทางการเริ่มต้นใช้งาน
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          CJNINE เป็นเว็บไซต์ผู้ให้บริการโดยตรงหรือไม่?
+        </summary>
+
+        <p>
+          ไม่ใช่ CJNINE เป็นเว็บไซต์ข้อมูลอิสระ
+          และไม่ได้อ้างว่าเป็นเว็บไซต์หลัก
+          ของผู้ให้บริการปลายทาง
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          ก่อนเปิดเว็บไซต์ปลายทางควรตรวจสอบอะไร?
+        </summary>
+
+        <p>
+          ควรตรวจสอบ URL
+          เงื่อนไขการใช้งาน
+          นโยบายความเป็นส่วนตัว
+          และข้อมูลของผู้ให้บริการ
+          ก่อนดำเนินการ
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          ทำไมควรอ่านเงื่อนไขก่อนใช้งาน?
+        </summary>
+
+        <p>
+          เงื่อนไขและข้อกำหนด
+          อาจมีรายละเอียดสำคัญ
+          เกี่ยวกับการใช้งานบริการ
+          ดังนั้นควรอ่านให้ครบถ้วนก่อน
+          ตัดสินใจใช้งาน
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          ข้อมูลใน CJNINE อาจเปลี่ยนแปลงหรือไม่?
+        </summary>
+
+        <p>
+          ได้ เนื้อหาอาจได้รับการปรับปรุง
+          เมื่อมีข้อมูลใหม่
+          ดังนั้นข้อมูลล่าสุดจากเว็บไซต์
+          ของผู้ให้บริการควรถือเป็นข้อมูลอ้างอิงหลัก
+        </p>
+
+      </details>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================== -->
+
+<section>
+
+  <div class="container">
+
+    <div class="cta">
+
+
+      <h2>
+        พร้อมศึกษาข้อมูลเพิ่มเติม?
+      </h2>
+
+
+      <p>
+        คุณสามารถเปิดเว็บไซต์ปลายทาง
+        เพื่อดูรายละเอียด
+        เงื่อนไข
+        และข้อมูลล่าสุดจากผู้ให้บริการ
+      </p>
+
+
+      <a
+        class="btn btn-primary"
+        href="https://www.cjworld8.com/register?ref=TrQMLzS8vHxWevPJa1ye5zf9xXDSmlI90QBV"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+      >
+        ไปยังเว็บไซต์
+      </a>
+
+
+      <div class="disclosure">
+
+        Disclosure:
+        ลิงก์บางส่วนบน CJNINE
+        อาจเป็นลิงก์แนะนำ
+        และผู้จัดทำเว็บไซต์อาจได้รับประโยชน์
+        หากมีการดำเนินการผ่านลิงก์ดังกล่าว
+        โปรดตรวจสอบรายละเอียด
+        เงื่อนไขของผู้ให้บริการ
+        และกฎหมายที่เกี่ยวข้องในพื้นที่ของคุณ
+        ก่อนใช้งาน
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
 
 </main>
 
+
+
+<!-- =========================
+     FOOTER
+========================== -->
 
 <footer>
 
   <div class="container">
 
-    © 2026 CJWorld8 Guide
+    <strong>
+      CJNINE
+    </strong>
+
+    <br>
+
+    © 2026 CJNINE.
+    All rights reserved.
 
     <br>
 
     เว็บไซต์นี้เป็นเว็บไซต์ข้อมูลอิสระ
-    และไม่ใช่เว็บไซต์ทางการของผู้ให้บริการ
+    และไม่ใช่เว็บไซต์อย่างเป็นทางการ
+    ของผู้ให้บริการปลายทาง
 
   </div>
 
 </footer>
+
 
 </body>
 </html>
